@@ -1,4 +1,6 @@
-Angular application store contacts for a user.
+### ADDRESS BOOK
+
+Basic Angular application store contacts for a user.
 
 All user's contacts are stored in localStorage for persistence
 
