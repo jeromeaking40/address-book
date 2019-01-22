@@ -1,0 +1,19 @@
+<div class="container text-center pt-5">
+	<h3>All Your Contacts</h3>
+
+	<div class="row">
+		<div
+			class=" col-md-3 card text-white bg-secondary mb-3"
+			style="max-width: 18rem;"
+			ng-repeat="card in card.contacts"
+		>
+			<div class="card-body">
+				<h5 class="card-title">{{ card.name }}</h5>
+				<p class="card-text">{{ card.street }}</p>
+				<p class="card-text">{{ card.city }}, {{ card.state }}</p>
+				<p class="card-text">{{ card.zip }}</p>
+				<p class="card-text">{{ card.phone }}</p>
+			</div>
+		</div>
+	</div>
+</div>

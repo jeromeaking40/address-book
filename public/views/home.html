@@ -1,0 +1,44 @@
+<div class="container text-center">
+	<div class="jumbotron">
+		<h3>Welcome to Address Book</h3>
+		<p class="lead">Add and view all your contacts whenever you want!</p>
+	</div>
+
+	<a href="/cardview" ng-if="home.contacts.length >= 1">
+		<button class="btn btn-default">View Card View</button>
+	</a>
+
+	<h3 class="pt-2" ng-if="!home.contacts">
+		No contacts have been added yet. How about adding some?
+	</h3>
+	<a href="/add"> <button class="btn btn-default">Add Contacts!</button> </a>
+
+	<!-- SHOW CONTACTS IN TABLE FORM -->
+	<div class="pt-2">
+		<table
+			class="table table-dark"
+			ng-repeat="contact in home.contacts track by $index"
+		>
+			<thead>
+				<tr>
+					<th scope="col">Name</th>
+					<th scope="col">Street</th>
+					<th scope="col">City</th>
+					<th scope="col">State</th>
+					<th scope="col">Zip</th>
+					<th scope="col">Phone</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">{{ contact.name }}</th>
+					<td>{{ contact.street }}</td>
+					<td>{{ contact.city }}</td>
+					<td>{{ contact.state }}</td>
+					<td>{{ contact.zip }}</td>
+					<td>{{ contact.phone }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="addressBook">
+	<head>
+		<base href="/" />
+
+		<title>Address Book</title>
+		<!-- CSS -->
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Coiny|Open+Sans"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/app.css" />
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-route.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+
+	<body ng-controller="HomeCtrl">
+		<div id="wrapper">
+			<!--NAVIGATION-->
+			<ng-include src="'views/navbar.html'"></ng-include>
+			<!--END OF NAVIGATION-->
+
+			<!--PAGE CONTENT-->
+			<div id="content"><ng-view></ng-view></div>
+			<!--END OF PAGE CONTENT-->
+
+			<!--FOOTER-->
+			<ng-include src="'views/footer.html'"></ng-include>
+			<!--END OF FOOTER-->
+		</div>
+
+		<!--CONTROLLERS-->
+		<script type="text/javascript" src="/controllers/HomeCtrl.js"></script>
+		<script
+			type="text/javascript"
+			src="/controllers/AddContactsCtrl.js"
+		></script>
+		<script
+			type="text/javascript"
+			src="/controllers/CardContactsCtrl.js"
+		></script>
+	</body>
+</html>

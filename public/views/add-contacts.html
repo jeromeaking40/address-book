@@ -1,0 +1,25 @@
+<div class="container text-center pt-5">
+	<h3>Add Your Contacts</h3>
+
+	<form class="form" ng-submit="vm.addNewContact()">
+		<label for="Name">Name:</label>
+		<input class="form-control" type="text" ng-model="vm.contactInfo.name" />
+
+		<label for="Street">Street:</label>
+		<input class="form-control" type="text" ng-model="vm.contactInfo.street" />
+
+		<label for="City">City:</label>
+		<input class="form-control" type="text" ng-model="vm.contactInfo.city" />
+
+		<label for="State">State:</label>
+		<input class="form-control" type="text" ng-model="vm.contactInfo.state" />
+
+		<label for="Zip">Zipcode:</label>
+		<input class="form-control" type="text" ng-model="vm.contactInfo.zip" />
+
+		<label for="Phone">Phone:</label>
+		<input class="form-control" type="text" ng-model="vm.contactInfo.phone" />
+
+		<button class="btn btn-default">Add</button>
+	</form>
+</div>
